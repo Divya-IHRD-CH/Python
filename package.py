@@ -1,10 +1,26 @@
-import math
-import random
-import datetime
-random_number=random.randint(1,100)
-print(f"Random number between 1 and 100:{random_number}")
-current_datetime=datetime.datetime.now()
-print(f"current date and time:{current_datetime}")
-number=int(input("Enter a number:"))
-square_root=math.sqrt(number)
-print(f"The square root of {number} is:{square_root}")
+from graphics.rectangle import area as rect_area,perimeter as rect_perimeter
+from graphics.circle import area as circle_area,perimeter as circle_perimeter
+from graphics._3D_graphics. cuboid import surface_area as cuboid_surface_area,volume as cuboid_volume
+from graphics._3D_graphics .sphere import surface_area as sphere_surface_area,volume as sphere_volume 
+print("Enter the length and breadth of the rectangle:")
+l=int(input("Length:"))
+b=int(input("Breadth:"))
+print("Rectangle Area:",rect_area(l,b))
+print("Rectangle perimeter:",rect_perimeter(l,b))
+print("\n\n")
+print("Enter the radius of the circle:")
+radius=int(input("radius:"))
+print("Circle Area:",circle_area(radius))
+print("Circle Perimeter:",circle_perimeter(radius))
+print("\n\n")
+print("Enter the dimension of cuboid:")
+length=float(input("length:"))
+width=float(input("width:"))
+height=float(input("Height:"))
+print("cuboid surface Area:",cuboid_surface_area(length,width,height))
+print("cuboid volume:",cuboid_volume(length,width,height))
+print("\n\n")
+print("Enter the radius of the sphere:")
+radius=float(input("Radius:"))
+print("Sphere Surface Area:",sphere_surface_area(radius))
+print("Sphere Volume:",sphere_volume(radius))
